@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="styles/fonts.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+    <div class="container">
+        <h1 class="m-t-40">Unix Timestamp Conversion Tool</h1>
+        <hr />
+        <div class="m-t-8-per">
+            The current unix timestamp is
+            <a id="current-timestamp" title="Click to copy"></a>
+            (<span id="copy-text">Click to copy</span>)
+        </div>
+        <h4 class="m-t-40">Unix Timestamp to Human readable date</h4>
+        <form id="unix-form" class="m-t-15">
+            <label class="form-label">
+                <span class="form-description">Enter your Timestamp</span>
+                <input type="number" placeholder="Enter a Timestamp" id="unixtime" class="form-control m-t-15 w-300" />
+            </label>
+            <button type="submit" class="m-l-10 form-submit">Convert</button>
+        </form>
+        <div class="row m-t-40">
+            <div class="col m-t-3">
+                <div class="col-key">
+                    <b>GMT:</b>
+                </div>
+                <div class="col-value">
+                    <span id="utc-time-zone"></span>
+                </div>
+            </div>
+            <div class="col m-t-3">
+                <div class="col-key">
+                    <b>Your Time Zone:</b>
+                </div>
+                <div class="col-value">
+                    <span id="your-time-zone">Wed 17</span>
+                </div>
+            </div>
+            <div class="col m-t-3">
+                <div class="col-key">
+                    <b>Relative:</b>
+                </div>
+                <div class="col-value">
+                    <span id="relative-time"></span>
+                </div>
+            </div>
+        </div>
+        <h4 class="m-t-50">Human Readable to Unix Timestamp</h4>
+        <form id="date-form" class="m-t-15">
+            <div class="d-flex">
+                <label class="form-label">
+                    <span class="form-description">Year</span>
+                    <input type="number" placeholder="YYYY" id="year" class="form-control m-t-5 w-105" />
+                </label>
+                <label class="form-label m-l-15">
+                    <span class="form-description">Month</span>
+                    <input type="number" placeholder="MM" id="month" class="form-control m-t-5 w-105" />
+                </label>
+                <label class="form-label m-l-15">
+                    <span class="form-description">Day</span>
+                    <input type="number" placeholder="DD" id="day" class="form-control m-t-5 w-105" />
+                </label>
+                <label class="form-label m-l-15">
+                    <span class="form-description">Hour(24 hour)</span>
+                    <input type="number" placeholder="HH" id="hour" class="form-control m-t-5 w-105" />
+                </label>
+                <label class="form-label m-l-15">
+                    <span class="form-description">Minutes</span>
+                    <input type="number" placeholder="MM" id="minutes" class="form-control m-t-5 w-105" />
+                </label>
+                <label class="form-label m-l-15">
+                    <span class="form-description">Seconds</span>
+                    <input type="number" placeholder="SS" id="seconds" class="form-control m-t-5 w-105" />
+                </label>
+            </div>
+            <button type="submit" class="form-submit m-t-15">Convert</button>
+        </form>
+        <div class="row m-t-40">
+            <div class="col m-t-3">
+                <div class="col-key">
+                    <b>Unix Timestamp:</b>
+                </div>
+                <div class="col-value">
+                    <span id="unix-timestamp"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="scripts/libraries/moment.js"></script>
+<script src="scripts/unix-to-date.js"></script>
+<script src="scripts/date-to-unix.js"></script>
+</html>
