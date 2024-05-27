@@ -7,8 +7,10 @@ const currentTimestampEl = document.getElementById('current-timestamp');
 const copyTextEl = document.getElementById('copy-text');
 
 const setDates = (unixtime) => {
+    let timeFormat = 'seconds';
     if (unixtime.length > 11) {
         unixtime /= 1000;
+        timeFormat = 'milliseconds';
     }
     const format = 'ddd LL, LTS';
 
@@ -17,6 +19,8 @@ const setDates = (unixtime) => {
     const utcDate = date.utc().format(format);
     const fromNow = date.fromNow();
 
+    const timeFormatEl = document.getElementById('format');
+    timeFormatEl.textContent = timeFormat;
     const yourTimeZoneEl = document.getElementById('your-time-zone');
     yourTimeZoneEl.textContent = localDate;
     const utcTimeZoneEl = document.getElementById('utc-time-zone');

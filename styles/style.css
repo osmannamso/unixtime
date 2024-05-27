@@ -4,6 +4,15 @@
     font-family: Roboto, serif;
 }
 
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+}
+
 h1 {
     font-size: 24px;
 }
@@ -13,7 +22,17 @@ h4 {
 }
 
 .container {
+    display: flex;
+    flex-direction: column;
     padding: 0 25%;
+    height: 100%;
+}
+
+.footer {
+    margin-top: auto;
+    text-align: center;
+    border-top: 1px solid black;
+    padding: 10px 0;
 }
 
 .m-t-3 {
